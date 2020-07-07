@@ -10,20 +10,9 @@ block signup
       include ./Sections/InputName
       include ./Sections/AuthPhone
       include ./Sections/InputAddress
-
-      input(type='checkbox')
-      strong 전체 약관에 동의합니다
-      input(type='checkbox')
-      span 필수 항목에 동의합니다
-      a(href="/") 배민사장님광장 이용약관
-      a(href="/") 개인정보 수집이용 동의
-      input(type='checkbox')
-      span 광고성 정보 수신 동의 (선택)
-      ul
-        li 만 14세 이상 회원만 강비 가능합니다
-      a(href='/') 내용보기
+      include ./Sections/PolicyAgree
       button(type='submit') 가입완료
-  
+      
   //- 유효성 검사
   script(src='/javascripts/validate.js')
   //- 이메일 핸들러
@@ -31,3 +20,5 @@ block signup
   //- 다음 주소 api
   script(src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js")
   script(src='/javascripts/findAddr.js')
+  //- 이용약관 자동체크
+  script(src='/javascripts/policyAgree.js')
