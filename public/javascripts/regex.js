@@ -23,3 +23,12 @@ const checkPw = function(){
         pwMsg.innerHTML = "비밀번호는 영문+숫자 조합만 허용하며, 8~20자만 사용 가능합니다."
     }
 }
+
+const confirmPw = function(){
+    const pw = document.querySelector('.accountPw');
+    const nextPw = document.querySelector('.confirmPw');
+    const confirmPwMsg = document.querySelector('.confirmPwMsg');
+    if(pw.value !== nextPw.value){
+        confirmPwMsg.innerHTML = "위 비밀번호와 일치하지 않습니다. 다시 입력해 주세요."
+    }
+}
