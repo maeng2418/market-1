@@ -7,8 +7,8 @@ block signup
       include ./Sections/InputId
       include ./Sections/InputPw
       include ./Sections/InputEmail
+      include ./Sections/InputName
 
-      input.name(type='text', placeholder="이름*")
       input.phone(type='number', placeholder="휴대폰*")
       button(onClick="confirmPhone()") 인증받기
       ul
@@ -36,7 +36,7 @@ block signup
       button(type='submit') 가입완료
   
   //- 유효성 검사
-  script(src='/javascripts/regex.js')
+  script(src='/javascripts/validate.js')
   //- 이메일 핸들러
   script(src='/javascripts/emailSelect.js') 
 
