@@ -9,14 +9,7 @@ block signup
       include ./Sections/InputEmail
       include ./Sections/InputName
       include ./Sections/AuthPhone
-
-      input(type='checkbox')
-      strong 선택 정보를 입력하시겠어요?
-      a(href="/") 내용보기
-      input.postcode(type='number', placeholder="우편번호")
-      button.findAddr(onClick="findAddr()") 주소찾기
-      input.address(type='text', placeholder="주소")
-      input.detailAddr(type="text", placeholder="상세 주소")
+      include ./Sections/InputAddress
 
       input(type='checkbox')
       strong 전체 약관에 동의합니다
@@ -34,5 +27,7 @@ block signup
   //- 유효성 검사
   script(src='/javascripts/validate.js')
   //- 이메일 핸들러
-  script(src='/javascripts/emailSelect.js') 
-
+  script(src='/javascripts/emailSelect.js')
+  //- 다음 주소 api
+  script(src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js")
+  script(src='/javascripts/findAddr.js')
