@@ -1,0 +1,46 @@
+extends ../../index
+
+block signup
+  .container
+    strong.requiredInput 필수 정보를 입력해주세요.
+    form.registerForm
+      include ./Sections/InputId
+      include ./Sections/InputPw
+
+      input.emailId(type='text', placeholder="이메일 앞자리*")
+      span @
+      input.emailAddr(type='text', placeholder="이메일 뒷자리*")
+      select.emailSelect(placeholder="이메일 선택")
+        option.naver 네이버
+        option.daum 다음
+        option.google 구글
+      input.name(type='text', placeholder="이름*")
+      input.phone(type='number', placeholder="휴대폰*")
+      button(onClick="confirmPhone()") 인증받기
+      ul
+        li 인증번호 전송은 통신사에 따라 최대 1분까지 소요될 수 있습니다.
+        li 인증번호가 도착하지 않을 경우 '인증번호 재전송'을 눌러주세요.
+      input(type='checkbox')
+      strong 선택 정보를 입력하시겠어요?
+      a(href="/") 내용보기
+      input.postcode(type='number', placeholder="우편번호")
+      button.findAddr(onClick="findAddr()") 주소찾기
+      input.address(type='text', placeholder="주소")
+      input.detailAddr(type="text", placeholder="상세 주소")
+
+      input(type='checkbox')
+      strong 전체 약관에 동의합니다
+      input(type='checkbox')
+      span 필수 항목에 동의합니다
+      a(href="/") 배민사장님광장 이용약관
+      a(href="/") 개인정보 수집이용 동의
+      input(type='checkbox')
+      span 광고성 정보 수신 동의 (선택)
+      ul
+        li 만 14세 이상 회원만 강비 가능합니다
+      a(href='/') 내용보기
+      button(type='submit') 가입완료
+  
+  //- 유효성 검사
+  script(src='/javascripts/regex.js') 
+
