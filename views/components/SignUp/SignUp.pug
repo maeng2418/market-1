@@ -8,9 +8,6 @@ block signup
       include ./Sections/InputPw
       include ./Sections/InputEmail
 
-        option.naver 네이버
-        option.daum 다음
-        option.google 구글
       input.name(type='text', placeholder="이름*")
       input.phone(type='number', placeholder="휴대폰*")
       button(onClick="confirmPhone()") 인증받기
@@ -39,5 +36,7 @@ block signup
       button(type='submit') 가입완료
   
   //- 유효성 검사
-  script(src='/javascripts/regex.js') 
+  script(src='/javascripts/regex.js')
+  //- 이메일 핸들러
+  script(src='/javascripts/emailSelect.js') 
 
