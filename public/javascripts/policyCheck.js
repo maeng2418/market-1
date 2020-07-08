@@ -1,4 +1,4 @@
-const allCheck = function () {
+const check = function () {
     const checkAll = document.querySelector('.checkAll');
     const checkRequired = document.querySelector('.checkRequired');
     const checkAd = document.querySelector('.checkAd');

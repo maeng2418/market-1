@@ -1,6 +1,18 @@
+html, body, div, span, a, p, strong, ul, li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+html, body, .container {
+  height: 100%;
 }
 
 a {
@@ -9,4 +21,344 @@ a {
 
 .idMsg, .pwMsg, .confirmPwMsg, .nameMsg {
   color: red;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 60px;
+  width: 328px;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo{
+  display: block;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.logo img{
+  width: 220px;
+  vertical-align: top;
+}
+
+.requiredInput{
+  font-family: Roboto, "Noto Sans KR", sans-serif, 돋움, Dotum, helvetica;
+  margin-bottom: 10px;
+  padding-right: 16px;
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: -0.4px;
+  color: #212329;
+  font-weight: normal;
+}
+
+input[type="text"], input[type="password"] {
+  width: 100%;
+  height: 50px;
+  padding: 12px 14px;
+  border: 1px solid #d7dbe6;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.6px;
+  box-sizing: border-box;
+  transition: border-color 0.15s ease-in-out;
+  margin-top: 10px;
+}
+
+.inputEmail {
+  display: flex;
+}
+
+.emailId, .emailAddr {
+  width: 150px !important;
+}
+
+.emailId {
+  margin-right: auto;
+}
+
+.emailAddr{
+  margin-left: auto;
+}
+
+.nerd{
+  font-family: 'NotoSansKR';
+  padding-top: 27px;
+}
+
+.emailSelect{
+  display: block;
+  width: 100%;
+  padding: 5px 14px;
+  height: 50px;
+  border: 1px solid #d7dbe6;
+  box-sizing: border-box;
+  background-size: 16px 16px;
+  line-height: 36px;
+  font-size: 17px !important;
+  color: #212329;
+  border-radius: 0;
+  outline: none;
+  margin-top: 10px;
+  text-rendering: auto;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-align: start;
+  align-items: center;
+  white-space: pre;
+  font: 400 13.3333px Arial;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+  background-repeat: no-repeat;
+ 	-webkit-appearance: none; 
+	appearance: none;
+  background-position: 95%;
+}
+
+.phone{
+  width: 220px !important;
+}
+
+.authPhone{
+  display: flex;
+}
+
+.authPhone button{
+  margin-left: auto;
+  width: 98px;
+  height: 50px;
+  display: inline-block;
+  text-align: center;
+  font-weight: bold;
+  line-height: 22px;
+  border: 1px solid;
+  color: #bbc0cd;
+  font: 16px Arial;
+  margin-top: 10px;
+  padding: 12px 14px;
+  border: 1px solid #d7dbe6;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.6px;
+  box-sizing: border-box;
+  transition: border-color 0.15s ease-in-out;
+  background-color: #fff;
+}
+
+.authPhoneDesc{
+  margin-top: 12px;
+}
+
+.authPhoneDesc ul, .ageInfo{
+  list-style: none;
+}
+
+.authPhoneDesc li::before{
+  content: '';
+  position: absolute;
+  display: block;
+  top: 8px;
+  left: 0;
+  width: 3px;
+  height: 3px;
+  background: #bbc0cd;
+  border-radius: 50%;
+}
+
+.authPhoneDesc li{
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: -0.1px;
+  color: #898989;
+  font-weight: normal;
+  position: relative;
+  padding-left: 9px;
+}
+
+.signupGuide{
+  margin: 50px 0 20px;
+  padding-right: 16px;
+  line-height: 25px;
+  letter-spacing: -0.4px;
+  color: #212329;
+}
+/* 
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"] + label{
+  display: inline-block;
+  position: relative;
+  padding-left: 35px;
+  font: 14px 'Open Sans', Arial, sans-serif;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  letter-spacing: -0.4px;
+  vertical-align: middle;
+}
+
+input[type="checkbox"] + label:last-child {
+  margin-bottom: 0;
+}
+
+input[type="checkbox"] + label:before {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #6cc0e5;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: .6;
+  -webkit-transition: all .12s, border-color .08s;
+  transition: all .12s, border-color .08s;
+}
+
+input[type="checkbox"]:checked + label:before {
+  width: 10px;
+  top: -5px;
+  left: 5px;
+  border-radius: 0;
+  opacity: 1;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+} */
+
+.signupGuide a {
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: -0.1px;
+  color: #898989;
+  font-weight: normal;
+  position: relative;
+  padding-left: 9px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.poscodeBtnWrap{
+  display: flex;
+}
+
+#postcode {
+  width: 220px;
+  color: #8e929f;
+  line-height: 24px;
+  letter-spacing: -0.6px;
+}
+
+.findBtn {
+  margin-left: auto;
+  width: 98px;
+  height: 50px;
+  display: inline-block;
+  text-align: center;
+  font-weight: bold;
+  line-height: 22px;
+  border: 1px solid;
+  color: #bbc0cd;
+  font: 16px Arial;
+  margin-top: 10px;
+  padding: 12px 14px;
+  border: 1px solid #d7dbe6;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.6px;
+  box-sizing: border-box;
+  transition: border-color 0.15s ease-in-out;
+}
+
+#disabled{
+  background-color: rgba(239, 239, 239, 0.3);
+}
+
+#active{
+  background-color: #fff;
+}
+
+.checkPolicy{
+  display: flex;
+  flex-direction: column;
+  padding: 50px 0 33px;
+}
+
+.checkAllLabel{
+  font-size: 16px !important;
+  line-height: 25px;
+  letter-spacing: -0.4px;
+  color: #212329;
+  font-weight: bold !important;
+  vertical-align: middle;
+}
+
+.inputCheckBox{
+  margin-top: 25px;
+}
+
+.linked{
+  padding: 2px 0 0 43px;
+}
+
+.linked a{
+  display: inline-block;
+  margin-right: 6px;
+  line-height: 24px;
+  color: #8e929f;
+}
+
+.adDesc{
+  padding: 2px 0 0 43px;
+  color: #8e929f;
+}
+
+.ageInfo{
+  margin-top: 15px;
+}
+
+.ageInfo li::before{
+  content: '';
+  position: absolute;
+  display: block;
+  top: 8px;
+  left: 0;
+  width: 3px;
+  height: 3px;
+  background: #bbc0cd;
+  border-radius: 50%;
+}
+
+.ageInfo li{
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: -0.1px;
+  color: #898989;
+  font-weight: normal;
+  position: relative;
+  padding-left: 9px;
+}
+
+.ageInfo li a{
+  cursor: pointer;
+  color: #8e929f;
+  text-decoration: underline;
+}
+
+.submitSignUp{
+  background: #1a7cff;
+  color: #fff;
+  display: inline-block;
+  padding: 16px 0 14px;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
 }
