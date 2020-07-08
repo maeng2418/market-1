@@ -13,7 +13,8 @@ var app = express();
 // 뷰 폴더의 기본 경로 설정
 app.set('views', [path.join(__dirname, 'views'),
   path.join(__dirname, '/views/components/SignUp'),
-  path.join(__dirname, '/views/components/SignIn')
+  path.join(__dirname, '/views/components/SignIn'),
+  path.join(__dirname, '/views/components/Main'),
 ]);
 app.set('view engine', 'pug');
 
