@@ -1,3 +1,15 @@
+const activeBtn = function(){
+    const check = document.querySelector('.activeSelectInfo');
+    const findBtn = document.querySelector('.findBtn');
+    if(check.checked){
+        findBtn.disabled = false;
+        findBtn.setAttribute('id', 'active');
+    }else{
+        findBtn.disabled = true;
+        findBtn.setAttribute('id', 'disabled');
+    }
+}
+
 const findAddr = function () {
     new daum.Postcode({
         oncomplete: function (data) {
