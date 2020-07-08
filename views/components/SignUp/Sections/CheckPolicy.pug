@@ -1,0 +1,17 @@
+.checkPolicy
+  .checkAllContainer
+    input.checkAll(type='checkbox', onclick="check()", name="allCheck")
+    label.checkAllLabel(for="allCheck") 전체 약관에 동의합니다
+  .inputCheckBox
+    input.checkRequired(type='checkbox', name="checkRequired")
+    label.checkRequiredLabel(for="checkRequired") 필수 항목에 동의합니다
+    .linked
+      a(href="/") 배민사장님광장 이용약관
+      a(href="/") 개인정보 수집이용 동의
+  .inputCheckBox
+    input.checkAd(type='checkbox', name="checkAd")
+    label.checkAdLabel(for="checkAd") 광고성 정보 수신 동의 (선택)
+    .adDesc 배민사장님광장 회원에게 제공하는 서비스의 광고성 정보를 수신합니다.
+  ul.ageInfo
+    li 만 14세 이상 회원만 강비 가능합니다.
+      a(href='/') 내용보기
