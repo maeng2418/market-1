@@ -24,7 +24,7 @@ const signUpSubmit = function (e) {
         }).then(response => response.json())
             .then(data => {
                 if (data.success) {
-                    window.location.href = "/"
+                    window.location.href = `/comeplete/id=${data.id}`
                 } else {
                     if(data.duplicate){
                         alert("중복된 아이디입니다.")

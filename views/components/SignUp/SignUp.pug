@@ -3,7 +3,7 @@ extends ../../index
 block signup
   .container
     strong.requiredInput 필수 정보를 입력해주세요.
-    form.registerForm(method="post", action="/api/users/signup")
+    form.registerForm
       include ./Sections/InputId
       include ./Sections/InputPw
       include ./Sections/InputEmail
