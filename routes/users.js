@@ -26,7 +26,7 @@ router.post('/signup', function(req, res, next) {
           if(err) return res.status(400).send(err);
           req.body.password = hash;
           db.insert(req.body, (err, userInfo) =>{
-            return res.status(200).json({success: true, id: userInfo._id})
+            return res.status(200).json({success: true, id: userInfo._id});
           })
         })
       })
