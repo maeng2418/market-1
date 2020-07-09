@@ -1,0 +1,104 @@
+html, body, div, span, a{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+html, body{
+    height: 100%;
+}
+
+
+button {
+    display: block;
+    text-align: center;
+    border: 0;
+    margin-top: 30px;
+    padding: 22px 0 20px;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #1a7cff;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.loginForm{
+    width: 330px;
+    margin: auto;
+}
+
+.accountId, .accountPwd{
+    font-family: "Noto Sans KR", "Roboto", "APPLE SD Gothic NEO", sans-serif, helvetica;
+    width: 100%;
+    height: 45px;
+    color: #212329;
+    font-size: 16px;
+    /* line-height: 22px; */
+    font-weight: 400;
+    background-color: #fff;
+    outline: 0;
+    border: 1px solid #d7dbe6;
+    margin-bottom: 10px;
+    padding: 15px;
+    box-sizing: border-box;
+    font: 400 13px Arial;
+}
+
+.saveId{
+    color: #212329;
+}
+
+.saveId input[type=checkbox] + label {
+    width: 18px;
+    height: 18px;
+    border-radius: 3px;
+}
+
+.saveId label{
+    padding-left: 10px;
+    height: 24px;
+    font-size: 16px;
+}
+
+.findAccount{
+    color: #8e929f;
+    font-size: 12px;
+    display: flex;
+    /* margin: 10px; */
+}
+
+.setLogin{
+    display: flex;
+    vertical-align: middle;
+    margin-top: 5px;
+}
+
+.findAccount a, .a-signUp{
+    text-decoration: none;
+    color: #8e929f;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.findAccount{
+    margin-left: auto;
+}
+
+.a-signUp{
+    margin-left: 16px;
+}
+
+.errorMsg{
+    font-size: 12px;
+    text-align: left;
+    color: #f45452;
+}

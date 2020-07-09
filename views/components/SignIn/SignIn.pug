@@ -1,0 +1,22 @@
+extends ../../index
+
+
+block signin
+    link(rel='stylesheet', href='/stylesheets/signin.css')
+    .container
+        form.loginForm
+            .errorMsg
+            input.accountId(type="text", placeholder="아이디")
+            input.accountPwd(type="text", placeholder="비밀번호")
+            .setLogin
+                .saveId
+                    input.saveId#checkSaveId(type="checkbox")
+                    label(for="checkSaveId") 아이디 저장
+                .findAccount
+                    a.a-findId(href="") 아이디
+                    span  / 
+                    a.a-findPwd(href="") 비밀번호 찾기
+                    a.a-signUp(href="/signup") 회원가입
+            button(type='submit', onclick="checkAccount(event)") 로그인
+
+    script(src='/javascripts/signIn.js')
