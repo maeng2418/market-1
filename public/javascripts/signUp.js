@@ -26,7 +26,9 @@ const signUpSubmit = function (e) {
                 if (data.success) {
                     window.location.href = "/"
                 } else {
-                    alert("에러")
+                    if(data.duplicate){
+                        alert("중복된 아이디입니다.")
+                    }
                 }
             });
     }
