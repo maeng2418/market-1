@@ -1,4 +1,3 @@
-
 const checkAccount = function (e) {
     e.preventDefault();
     const url = "/api/users/signin";
