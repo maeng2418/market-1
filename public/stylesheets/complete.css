@@ -1,0 +1,12 @@
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+.infobox{
+    display: flex;
+}
+
+.ls-name, .ls-id, .ls-email, .ls-phone, .vs-name, .vs-id, .vs-email, .vs-phone{
+    display: block;
+}
