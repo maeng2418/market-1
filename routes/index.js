@@ -7,7 +7,7 @@ const db = new Database({ filename: path.join(__dirname, '../database/account.db
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('main', { title: 'Express' });
 });
 
 router.get('/signup', function(req, res, next) {
