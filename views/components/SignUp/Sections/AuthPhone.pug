@@ -1,5 +1,5 @@
 .authPhone
-    input.phone(type='text', placeholder="휴대폰*", onKeyup="this.value=this.value.replace(/[^0-9]/g,'')")
+    input.phone(type='text', name="phone" placeholder="휴대폰*", onKeyup="this.value=this.value.replace(/[^0-9]/g,'')")
     button(onClick="confirmPhone()")
         span 인증받기
 .authPhoneDesc
