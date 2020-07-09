@@ -6,8 +6,8 @@ block signin
     .container
         form.loginForm
             .errorMsg
-            input.accountId(type="text", placeholder="아이디")
-            input.accountPwd(type="text", placeholder="비밀번호")
+            input.accountId(type="text", name="id", placeholder="아이디")
+            input.accountPwd(type="password", name="password", placeholder="비밀번호")
             .setLogin
                 .saveId
                     input.saveId#checkSaveId(type="checkbox")

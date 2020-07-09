@@ -16,6 +16,7 @@ app.set('views', [path.join(__dirname, 'views'),
   path.join(__dirname, '/views/components/SignUp'),
   path.join(__dirname, '/views/components/SignIn'),
   path.join(__dirname, '/views/components/Main'),
+  path.join(__dirname, '/views/components/Complete'),
 ]);
 app.set('view engine', 'pug');
 

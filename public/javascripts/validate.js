@@ -27,7 +27,7 @@ const checkPw = function(){
     }
 }
 
-const confirmPw = function(){
+const confirmPwd = function(){
     const pw = document.querySelector('.accountPw');
     const nextPw = document.querySelector('.confirmPw');
     const confirmPwMsg = document.querySelector('.confirmPwMsg');

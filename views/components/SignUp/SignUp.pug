@@ -3,7 +3,7 @@ extends ../../index
 block signup
   .container
     strong.requiredInput 필수 정보를 입력해주세요.
-    form.registerForm(method="post", action="/api/users/signup")
+    form.registerForm
       include ./Sections/InputId
       include ./Sections/InputPw
       include ./Sections/InputEmail
@@ -12,12 +12,8 @@ block signup
       include ./Sections/InputAddress
       include ./Sections/checkPolicy
 
-<<<<<<< HEAD
       button.submitSignUp(type="submit", onclick="signUpSubmit(event)") 가입완료
-=======
-      button.submitSignUp(onclick="signUpSubmit(event)") 가입완료
->>>>>>> c6b031dcf8eec4e8657e473f350b081d407c1bf1
-  
+
   //- 유효성 검사
   script(src='/javascripts/validate.js')
   //- 이메일 핸들러
