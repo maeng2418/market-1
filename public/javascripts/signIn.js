@@ -1,7 +1,7 @@
 
 const checkAccount = function (e) {
     e.preventDefault();
-    const url = "";
+    const url = "/api/users/signin";
     // console.log(e)
     // console.log("check2")
     const idRegex = /^[a-z0-9_-]{4,20}$/;
@@ -29,9 +29,10 @@ const checkAccount = function (e) {
                 headers: {
                     'Content-Type': 'application/json'
                 }
-            }).then(res => function(res){
+            }).then(res => res.json()).then(function(data){
                 //메인 페이지로 이동 or 로그인정보 불일치
-                if(res.data.success){
+                if(data.success){
+                    alert("어서오세요 "+data.name+"님!");
                     const mainPageURL = "/main";
                     window.location.href = mainPageURL;
                 }else{
