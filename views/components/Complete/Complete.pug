@@ -1,23 +1,24 @@
 extends ../../index
 
-block complete
+block completeStyle
     link(rel='stylesheet', href='/stylesheets/complete.css')
-    .container
-        h1 회원이 되셨습니다
-        .linkbox
-            a.a-main 메인으로 →
-        .infobox
-            .labelCol
-                span.ls-name 이름
-                span.ls-id 아이디
-                span.ls-email 이메일
-                span.ls-phone 휴대폰
-            .valueCol
-                span.vs-name #{name}
-                span.vs-id #{id}
-                span.vs-email #{email}
-                span.vs-phone #{phone}
-        .cmtbox
-            span • 위 내용은 
-            a 내 정보 관리
-            span 에서 수정하실 수 있습니다.
+
+block complete
+    h1 회원이 되셨습니다
+    .linkbox
+        a.a-main 메인으로 →
+    .infobox
+        .labelCol
+            span.ls-name 이름
+            span.ls-id 아이디
+            span.ls-email 이메일
+            span.ls-phone 휴대폰
+        .valueCol
+            span.vs-name #{name}
+            span.vs-id #{id}
+            span.vs-email #{email}
+            span.vs-phone #{phone}
+    .cmtbox
+        span • 위 내용은 
+        a 내 정보 관리
+        span 에서 수정하실 수 있습니다.

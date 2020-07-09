@@ -3,10 +3,14 @@ html
   head
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
+    block signInStyle
+    block signUpStyle
+    block comepleteStyle
   body
-    include ./components/Header/Header
-    block content
-    block signup
-    block signin
-    block main
-    block complete
+    .container
+      include ./components/Header/Header
+      block error
+      block signup
+      block signin
+      block main
+      block complete
