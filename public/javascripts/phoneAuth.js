@@ -9,13 +9,18 @@ const activeAuth = function(){
 
 const auth = function(event){
     event.preventDefault();
-    const inputAuth = document.querySelector('.inputAuth');
-    inputAuth.innerHTML = `<div style="display: flex">
-    <input class="phone number" type='text' name="number" placeholder="인증번호 6자리 입력" onKeyup="this.value=this.value.replace(/[^0-9]/g,'')"/>
-    <span class="timer"></span>
-    <button class="authBtn" onclick="confirmPhone(event)">확인</button></div>
-    <span class="authMsg">인증번호를 입력해 주세요.</span>`;
-    time();
+    document.querySelector(".modal").style.display = "block";
+    document.querySelector(".okBtn").onclick = function (event) {
+        event.preventDefault();
+        document.querySelector(".modal").style.display = "none";
+        const inputAuth = document.querySelector('.inputAuth');
+        inputAuth.innerHTML = `<div style="display: flex">
+        <input class="phone number" type='text' name="number" placeholder="인증번호 6자리 입력" onKeyup="this.value=this.value.replace(/[^0-9]/g,'')"/>
+        <span class="timer"></span>
+        <button class="authBtn" onclick="confirmPhone(event)">확인</button></div>
+        <span class="authMsg">인증번호를 입력해 주세요.</span>`;
+        time();
+    }
 }
 
 const time = function(){
