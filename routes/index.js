@@ -18,10 +18,6 @@ router.get('/signin', function(req, res, next) {
   res.render('signin');
 });
 
-router.get('/main', function(req, res, next) {
-  res.render('main');
-});
-
 router.get('/complete', function(req, res, next) {
   const id = req.query.id;
   console.log("db id : ", req.query);
