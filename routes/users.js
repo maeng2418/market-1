@@ -20,6 +20,19 @@ router.get('/', function(req, res, next) {
   res.send('respond with a resource');
 });
 
+//아이디 중복체크
+router.post('/duplicate', function(req, res, next) {
+  db.find({id: req.body.id}, (err, userInfo)=>{
+    if(userInfo.length > 0){
+      // 아이디 중복
+      return res.status(200).json({duplicate: true})
+    }else{
+      // 중복없음
+      return res.status(200).json({duplicate: false})
+    }
+  })
+});
+
 //회원가입
 router.post('/signup', function(req, res, next) {
   db.find({id: req.body.id}, (err, userInfo)=>{

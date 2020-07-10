@@ -1,9 +1,14 @@
 const activeAuth = function(){
     const inputPhone = document.querySelector('.phone').value;
+    const authBtn = document.querySelector('.authBtn');
     if(inputPhone === ""){
-        const authBtn = document.querySelector('.authBtn').disabled = true;
+        authBtn.disabled = true;
+        authBtn.style.color = "#bbc0cd";
+        authBtn.style.borderColor = "#ccc";
     }else{
-        const authBtn = document.querySelector('.authBtn').disabled = false;
+        authBtn.disabled = false;
+        authBtn.style.color = "#1a7cff";
+        authBtn.style.borderColor = "#1a7cff";
     }
 }
 
@@ -17,7 +22,7 @@ const auth = function(event){
         inputAuth.innerHTML = `<div style="display: flex">
         <input class="phone number" type='text' name="number" placeholder="인증번호 6자리 입력" onKeyup="this.value=this.value.replace(/[^0-9]/g,'')"/>
         <span class="timer"></span>
-        <button class="authBtn" onclick="confirmPhone(event)">확인</button></div>
+        <button class="authBtn confirmAuth" onclick="confirmPhone(event)" style="color:#1a7cff; border-color:#1a7cff;" >확인</button></div>
         <span class="authMsg">인증번호를 입력해 주세요.</span>`;
         time();
     }

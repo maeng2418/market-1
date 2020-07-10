@@ -1,7 +1,7 @@
 .inputEmail
     input.emailId(type='text', placeholder="이메일 앞자리*", name="emailId")
     span.nerd @
-    input.emailAddr(type='text', placeholder="이메일 뒷자리*", name="emailAddr")
+    input.emailAddr(type='text', placeholder="이메일 뒷자리*", name="emailAddr", disabled)
 .emailSelctor
     select.emailSelect(onChange="onEmailHandler()")
         option.none(disabled, selected) 이메일 선택

@@ -10,6 +10,10 @@ a {
   color: red;
 }
 
+.available{
+  color: #898989;
+}
+
 .requiredInput{
   font-family: Roboto, "Noto Sans KR", sans-serif, 돋움, Dotum, helvetica;
   margin-bottom: 10px;
@@ -398,4 +402,4 @@ input[type="checkbox"]:checked + label:before {
   height:100%;
   background:rgba(0, 0, 0, 0.5);
   z-index:-1;
-}   
+}

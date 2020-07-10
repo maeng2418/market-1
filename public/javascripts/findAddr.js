@@ -1,11 +1,19 @@
 const activeBtn = function(){
     const check = document.querySelector('.activeSelectInfo');
     const findBtn = document.querySelector('.findBtn');
+    const detailAddress = document.querySelector('#detailAddress');
+
     if(check.checked){
         findBtn.disabled = false;
+        findBtn.style.borderColor = "#1a7cff";
+        findBtn.style.color = "#1a7cff";
+        detailAddress.disabled = false;
         findBtn.setAttribute('id', 'active');
     }else{
         findBtn.disabled = true;
+        findBtn.style.borderColor = "#ccc";
+        findBtn.style.color = "#bbc0cd";
+        detailAddress.disabled = true;
         findBtn.setAttribute('id', 'disabled');
     }
 }
