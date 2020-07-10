@@ -351,7 +351,7 @@ input[type="checkbox"]:checked + label:before {
   border: none;
 }
 
-.modal {
+.modal, .modalAddr {
   display: none;
   position:relative;
   width:100%;
@@ -359,7 +359,7 @@ input[type="checkbox"]:checked + label:before {
   z-index:1;
 }
 
-.modal button {
+.modal button, .modalAddr button {
   padding: 14px 0 13px;
   width: 100%;
   font-size: 16px;
@@ -372,7 +372,7 @@ input[type="checkbox"]:checked + label:before {
   border-radius: 0;
 }
 
-.modal .modalContent {
+.modal .modalContent, .modalAddrContent{
   overflow-y: auto;
   display: block;
   position: fixed;
@@ -386,6 +386,10 @@ input[type="checkbox"]:checked + label:before {
   word-break: break-all;
 }
 
+.modalAddrContent{
+  width: 500px;
+}
+
 .msgContainer{
   padding: 27px 25px 25px;
 }
@@ -394,7 +398,7 @@ input[type="checkbox"]:checked + label:before {
   font-weight: bold;
 }
 
-.modal .modalLayer {
+.modal .modalLayer, .modalAddr .modalLayer {
   position:fixed;
   top:0;
   left:0;
