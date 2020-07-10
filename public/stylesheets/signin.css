@@ -16,21 +16,21 @@ button {
     margin: auto;
 }
 
+
 .accountId, .accountPwd{
-    font-family: "Noto Sans KR", "Roboto", "APPLE SD Gothic NEO", sans-serif, helvetica;
     width: 100%;
     height: 45px;
     color: #212329;
     font-size: 16px;
-    /* line-height: 22px; */
     font-weight: 400;
     background-color: #fff;
-    outline: 0;
     border: 1px solid #d7dbe6;
     margin-bottom: 10px;
-    padding: 15px;
+    padding: 12px 14px;
     box-sizing: border-box;
     font: 400 13px Arial;
+    letter-spacing: -0.6px;
+    transition: border-color 0.15s ease-in-out;
 }
 
 .saveId{
