@@ -11,3 +11,15 @@ const check = function () {
         checkAd.checked = false;
     }
 }
+
+const devideCheck = function () {
+    const checkRequired = document.querySelector('.checkRequired');
+    const checkAd = document.querySelector('.checkAd');
+    const checkAll = document.querySelector('.checkAll');
+
+    if(checkAd.checked && checkRequired.checked){
+        checkAll.checked = true;
+    }else{
+        checkAll.checked = false;
+    }
+}

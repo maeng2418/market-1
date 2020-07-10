@@ -4,8 +4,8 @@
         label.activeSelectInfo(for="activeSelectInfo") 선택 정보를 입력하시겠어요?
         a(href="/") 내용보기
     .poscodeBtnWrap
-        input#postcode(type="text", placeholder="우편번호", name="postcode")
+        input#postcode(type="text", placeholder="우편번호", name="postcode", readonly)
         input.findBtn(type="button", disabled, onclick="findAddr()", value="주소 찾기", id="disabled")
-    input#address(type="text", placeholder="주소", name="address")
-    input#detailAddress(type="text", placeholder="상세주소", name="detailAddress")
+    input#address(type="text", placeholder="주소", name="address", readonly)
+    input#detailAddress(type="text", placeholder="상세주소", name="detailAddress", disabled)
 

@@ -1,5 +1,12 @@
 extends ../../index
 
+block mainStyle
+  link(rel='stylesheet', href='/stylesheets/main.css')
 
 block main
-    .content 메인 페이지입니다.
+    .reqMsg 사장님, 로그인해주세요!
+    button.signInBtn(onclick="location.href='/signin'") 배민사장님광장 로그인
+    .subContainer
+        a.findIdPw(href='/findIdPw') 아이디/비밀번호찾기
+        span.devider |
+        a.signUp(href='/signup') 회원가입

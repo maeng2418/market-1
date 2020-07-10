@@ -1,0 +1,57 @@
+.logo{
+    margin: 0 !important;
+    text-align: start !important;
+}
+
+.infobox{
+    display: flex;
+    border: 1px solid #d7dbe6;
+    margin: 15px;
+    margin-left: 0px;
+    padding: 5px;
+    width: 350px;
+    height: 120px;
+}
+
+.ls-name, .ls-id, .ls-email, .ls-phone, .vs-name, .vs-id, .vs-email, .vs-phone{
+    display: block;
+    margin: 8px;
+    margin-top: 10px;
+    height: 18px;
+}
+
+.cmtbox span, .cmtbox a{
+    color: #8e929f;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.cmtbox a{
+    text-decoration: underline;
+}
+
+.valueCol{
+    margin-left: 20px;
+}
+
+.a-main{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    color: #1a7cff;
+}
+
+.labelCol span{
+    font-size: 16px;
+    font-weight: 500;
+    color:rgb(136, 136, 136);
+}
+
+.valueCol span{
+    font-size: 16px;
+}
+
+.comment{
+    font-size: 25px;
+    margin-bottom: 20px;
+}

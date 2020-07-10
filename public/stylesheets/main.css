@@ -1,0 +1,36 @@
+.signInBtn{
+    background: #1a7cff;
+    color: #fff;
+    display: inline-block;
+    padding: 16px 0 14px;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    border: none;
+}
+
+.reqMsg{
+    font-family: Roboto, "Noto Sans KR", sans-serif, 돋움, Dotum, helvetica;
+    margin-bottom: 10px;
+    padding-right: 16px;
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: -0.4px;
+    color: #212329;
+    font-weight: normal;
+}
+
+.subContainer{
+    text-align: right;
+    margin-top: 10px;
+}
+
+.findIdPw, .signUp{
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.findIdPw, .signUp, .devider{
+    color: #8e929f;
+}
