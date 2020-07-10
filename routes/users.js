@@ -13,7 +13,7 @@ function toHexString(byteArray) {
   }).join('')
 }
 
-const db = new Database({filename: `${__dirname}/../database/account.db`, autoload:true});
+const db = new Database({filename: path.join(__dirname, '../database/account.db'), autoload:true});
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {

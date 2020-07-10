@@ -12,11 +12,11 @@ var app = express();
 
 // view engine setup
 // 뷰 폴더의 기본 경로 설정
-app.set('views', [`${__dirname}views`,
-  `${__dirname}/views/components/SignUp`,
-  `${__dirname}/views/components/SignIn`,
-  `${__dirname}/views/components/Main`,
-  `${__dirname}/views/components/Complete`,
+app.set('views', [path.join(__dirname, 'views'),
+  path.join(__dirname, '/views/components/SignUp'),
+  path.join(__dirname, '/views/components/SignIn'),
+  path.join(__dirname, '/views/components/Main'),
+  path.join(__dirname, '/views/components/Complete'),
 ]);
 app.set('view engine', 'pug');
 
@@ -25,7 +25,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(bodyParser.json());
-app.use(express.static(`${__dirname}/public`)));
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/api/users', usersRouter);
