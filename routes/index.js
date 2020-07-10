@@ -3,7 +3,7 @@ var router = express.Router();
 const path = require('path');
 
 const Database = require('nedb');
-const db = new Database({ filename: path.join(__dirname, '../database/account.db')});
+const db = new Database({ filename: `${__dirname}/../database/account.db`});
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
