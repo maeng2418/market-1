@@ -4,9 +4,9 @@ block completeStyle
     link(rel='stylesheet', href='/stylesheets/complete.css')
 
 block complete
-    h1 회원이 되셨습니다
+    .comment 회원이 되셨습니다.
     .linkbox
-        a.a-main 메인으로 →
+        a.a-main(href="/") 메인으로 →
     .infobox
         .labelCol
             span.ls-name 이름
@@ -20,5 +20,5 @@ block complete
             span.vs-phone #{phone}
     .cmtbox
         span • 위 내용은 
-        a 내 정보 관리
+        a(href="/mypage") 내 정보 관리
         span 에서 수정하실 수 있습니다.
