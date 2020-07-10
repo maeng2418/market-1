@@ -18,7 +18,18 @@ const activeBtn = function(){
     }
 }
 
-const findAddr = function () {
+const findAddr = function (event) {
+    event.preventDefault();
+    document.querySelector(".modalAddr").style.display = "block";
+
+    //blur되면 닫도록 설정.
+    document.querySelector(".modalAddr").onclick = function (event) {
+        event.preventDefault();
+        document.querySelector(".modalAddr").style.display = "none";
+    }
+
+    const modalAddrContent = document.querySelector('.modalAddrContent');
+
     new daum.Postcode({
         oncomplete: function (data) {
             // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
@@ -53,6 +64,8 @@ const findAddr = function () {
             document.getElementById("address").value = addr;
             // 커서를 상세주소 필드로 이동한다.
             document.getElementById("detailAddress").focus();
+            document.querySelector(".modalAddr").style.display = "none";
+
         }
-    }).open();
+    }).embed(modalAddrContent);
 }
