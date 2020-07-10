@@ -34,7 +34,7 @@ const checkAccount = function (e) {
                 //메인 페이지로 이동 or 로그인정보 불일치
                 if(data.success){
                     alert("어서오세요 "+data.name+"님!");
-                    const mainPageURL = "/main";
+                    const mainPageURL = "/";
                     window.location.href = mainPageURL;
                 }else{
                     alert('로그인 정보가 일치하지 않습니다.');
